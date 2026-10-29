@@ -2,7 +2,8 @@
 # ============================================================================
 # Install the CS9711 Fingerprint Manager GUI
 # ============================================================================
-# Installs Python GTK4 dependencies and creates a desktop shortcut.
+# Installs Python GTK4 dependencies, compiles the GUI translations and creates
+# a desktop shortcut.
 #
 # Usage: ./setup-gui.sh
 # ============================================================================
@@ -18,42 +19,33 @@ echo ""
 # Detect package manager
 if command -v apt &>/dev/null; then
     echo "[1/3] Installing GTK4 Python dependencies (apt)..."
-    sudo apt install -y python3-gi gir1.2-gtk-4.0 gir1.2-adw-1 2>&1 | tail -3
+    sudo apt install -y python3-gi gir1.2-gtk-4.0 gir1.2-adw-1 gettext 2>&1 | tail -3
 elif command -v dnf &>/dev/null; then
     echo "[1/3] Installing GTK4 Python dependencies (dnf)..."
-    sudo dnf install -y python3-gobject gtk4 libadwaita 2>&1 | tail -3
+    sudo dnf install -y python3-gobject gtk4 libadwaita gettext 2>&1 | tail -3
 elif command -v pacman &>/dev/null; then
     echo "[1/3] Installing GTK4 Python dependencies (pacman)..."
-    sudo pacman -S --needed --noconfirm python-gobject gtk4 libadwaita 2>&1 | tail -3
+    sudo pacman -S --needed --noconfirm python-gobject gtk4 libadwaita gettext 2>&1 | tail -3
 elif command -v zypper &>/dev/null; then
     echo "[1/3] Installing GTK4 Python dependencies (zypper)..."
-    sudo zypper install -y python3-gobject typelib-1_0-Gtk-4_0 typelib-1_0-Adw-1 2>&1 | tail -3
+    sudo zypper install -y python3-gobject typelib-1_0-Gtk-4_0 typelib-1_0-Adw-1 gettext-tools 2>&1 | tail -3
 else
     echo "[1/3] Unknown package manager — install these manually:"
-    echo "       python3-gi (PyGObject), GTK4, libadwaita"
+    echo "       python3-gi (PyGObject), GTK4, libadwaita, gettext (msgfmt)"
 fi
 echo ""
 
 # Make GUI executable
 echo "[2/3] Setting up GUI..."
 chmod +x "$SCRIPT_DIR/cs9711-manager.py"
+source "$SCRIPT_DIR/helpers/gui-setup.sh"
+if ! build_locale "$SCRIPT_DIR"; then
+    echo "       msgfmt not found — the GUI will run in English"
+fi
 
 # Create desktop shortcut
 echo "[3/3] Creating desktop shortcut..."
-DESKTOP_FILE="$HOME/.local/share/applications/cs9711-manager.desktop"
-mkdir -p "$HOME/.local/share/applications"
-
-cat > "$DESKTOP_FILE" << EOF
-[Desktop Entry]
-Type=Application
-Name=CS9711 Fingerprint Manager
-Comment=Configure Chipsailing CS9711 fingerprint scanner
-Exec=python3 $SCRIPT_DIR/cs9711-manager.py
-Icon=$SCRIPT_DIR/assets/cs9711-manager.svg
-Terminal=false
-Categories=Settings;HardwareSettings;System;
-Keywords=fingerprint;scanner;cs9711;biometric;chipsailing;
-EOF
+install_desktop_entry "$SCRIPT_DIR"
 
 echo ""
 echo "=== Setup complete ==="

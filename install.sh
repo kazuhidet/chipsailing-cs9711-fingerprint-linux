@@ -625,32 +625,28 @@ echo ""
 # ---- Step 8: Install GUI Manager ----
 echo "[8/8] Installing GUI Manager..."
 
-# Install GTK4 Python deps
+# Install GTK4 Python deps (+ gettext's msgfmt to compile the GUI translations)
 if [ "$PKG_FAMILY" = "apt" ]; then
-    sudo apt install -y python3-gi gir1.2-gtk-4.0 gir1.2-adw-1 2>&1 | tail -2
+    sudo apt install -y python3-gi gir1.2-gtk-4.0 gir1.2-adw-1 gettext 2>&1 | tail -2
 elif [ "$PKG_FAMILY" = "dnf" ]; then
-    sudo dnf install -y python3-gobject gtk4 libadwaita 2>&1 | tail -2
+    sudo dnf install -y python3-gobject gtk4 libadwaita gettext 2>&1 | tail -2
 elif [ "$PKG_FAMILY" = "pacman" ]; then
-    sudo pacman -S --needed --noconfirm python-gobject gtk4 libadwaita 2>&1 | tail -2
+    sudo pacman -S --needed --noconfirm python-gobject gtk4 libadwaita gettext 2>&1 | tail -2
 elif [ "$PKG_FAMILY" = "zypper" ]; then
-    sudo zypper install -y python3-gobject typelib-1_0-Gtk-4_0 typelib-1_0-Adw-1 2>&1 | tail -2
+    sudo zypper install -y python3-gobject typelib-1_0-Gtk-4_0 typelib-1_0-Adw-1 gettext-tools 2>&1 | tail -2
 fi
 
 # Make GUI executable
 chmod +x "$SCRIPT_DIR/cs9711-manager.py" 2>/dev/null || true
 
-# Create desktop shortcut
-DESKTOP_FILE="$HOME/.local/share/applications/cs9711-manager.desktop"
-mkdir -p "$HOME/.local/share/applications"
-echo "[Desktop Entry]
-Type=Application
-Name=CS9711 Fingerprint Manager
-Comment=Configure Chipsailing CS9711 fingerprint scanner
-Exec=python3 $SCRIPT_DIR/cs9711-manager.py
-Icon=$SCRIPT_DIR/assets/cs9711-manager.svg
-Terminal=false
-Categories=Settings;HardwareSettings;System;
-Keywords=fingerprint;scanner;cs9711;biometric;chipsailing;" > "$DESKTOP_FILE"
+# Translations + desktop shortcut (shared with setup-gui.sh)
+source "$SCRIPT_DIR/helpers/gui-setup.sh"
+if build_locale "$SCRIPT_DIR"; then
+    ok "GUI translations compiled ($(grep -v '^#' "$SCRIPT_DIR/po/LINGUAS" | tr '\n' ' '))"
+else
+    warn "msgfmt not found — the GUI will run in English"
+fi
+install_desktop_entry "$SCRIPT_DIR"
 
 ok "GUI Manager installed — search 'CS9711' or 'Fingerprint' in app launcher"
 logmsg "=== INSTALL COMPLETE ==="

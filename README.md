@@ -244,6 +244,23 @@ The GUI lets you:
 
 If a system update strands the driver, the GUI says so directly — a banner across the top names the missing libraries and offers the rebuild, rather than leaving you to guess at a USB fault.
 
+**Languages.** The GUI follows your desktop language and is translated into Japanese, German, French, Spanish and Simplified Chinese (falling back to English otherwise). `setup-gui.sh` and `install.sh` compile the catalogs from `po/` into `locale/` next to the script, and the in-app updater recompiles them after an update; this needs `msgfmt` from gettext, which both scripts install. To try another language: `LANGUAGE=ja python3 cs9711-manager.py`.
+
+To update or add a translation:
+
+```bash
+# Regenerate the template after changing GUI strings
+xgettext --language=Python --from-code=UTF-8 --keyword=_ --keyword=N_ \
+  --keyword=ngettext:1,2 --add-comments=Translators: \
+  --package-name=cs9711-manager -o po/cs9711-manager.pot cs9711-manager.py
+# Merge it into each catalog, then translate the new/empty entries
+for l in $(cat po/LINGUAS); do msgmerge --update --backup=none po/$l.po po/cs9711-manager.pot; done
+# New language: msginit -i po/cs9711-manager.pot -l <lang> -o po/<lang>.po, then add <lang> to po/LINGUAS
+bash helpers/gui-setup.sh   # compile into locale/
+```
+
+The desktop entry's translated name, comment and keywords live in `cs9711-manager.desktop`.
+
 ![CS9711 Fingerprint Manager](screenshot.png)
 
 ## Optional: Auto-Unlock GNOME Keyring
@@ -267,11 +284,13 @@ KWallet has the same problem in reverse: it is opened by a PAM module that captu
 ├── uninstall.sh                 # Remove driver, restore stock libfprint
 ├── cs9711-manager.py            # GTK4 GUI manager
 ├── setup-gui.sh                 # GUI dependency installer + desktop shortcut
-├── cs9711-manager.desktop       # Desktop entry template
+├── cs9711-manager.desktop       # Desktop entry template (incl. translated Name/Comment)
+├── po/                          # GUI translations (ja, de, fr, es, zh_CN) + template
 ├── patches/
 │   ├── cs9711-retry-delay-1500ms.patch
 │   └── cs9711-scan-cancel-cleanup.patch   # upstream 256ad3d (testing branch)
 ├── helpers/
+│   ├── gui-setup.sh             # Compiles po/ into locale/, writes the desktop entry
 │   ├── scan-cancel-patch.sh     # Applies the scan-cancellation patch (all build paths)
 │   └── set-empty-keyring-password.py
 ├── packaging/

@@ -1,0 +1,912 @@
+# French translation for cs9711-manager.
+# SPDX-FileCopyrightText: 2026 Mahmud Farooque
+# SPDX-License-Identifier: MIT
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: cs9711-manager\n"
+"Report-Msgid-Bugs-To: https://github.com/mmhfarooque/chipsailing-cs9711-"
+"fingerprint-linux/issues\n"
+"POT-Creation-Date: 2026-10-30 06:31+0900\n"
+"PO-Revision-Date: 2026-10-30 00:00+0900\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#. Translators: separator between items in a list, e.g. "sudo, polkit".
+#: cs9711-manager.py:70
+msgid ", "
+msgstr ", "
+
+#: cs9711-manager.py:175
+msgid "Login screen"
+msgstr "Écran de connexion"
+
+#: cs9711-manager.py:176
+msgid "Lock screen"
+msgstr "Écran de verrouillage"
+
+#: cs9711-manager.py:185
+msgid "Right index finger"
+msgstr "Index droit"
+
+#: cs9711-manager.py:186
+msgid "Left index finger"
+msgstr "Index gauche"
+
+#: cs9711-manager.py:187
+msgid "Right thumb"
+msgstr "Pouce droit"
+
+#: cs9711-manager.py:188
+msgid "Left thumb"
+msgstr "Pouce gauche"
+
+#: cs9711-manager.py:189
+msgid "Right middle finger"
+msgstr "Majeur droit"
+
+#: cs9711-manager.py:190
+msgid "Left middle finger"
+msgstr "Majeur gauche"
+
+#: cs9711-manager.py:191
+msgid "Right ring finger"
+msgstr "Annulaire droit"
+
+#: cs9711-manager.py:192
+msgid "Left ring finger"
+msgstr "Annulaire gauche"
+
+#: cs9711-manager.py:193
+msgid "Right little finger"
+msgstr "Auriculaire droit"
+
+#: cs9711-manager.py:194
+msgid "Left little finger"
+msgstr "Auriculaire gauche"
+
+#: cs9711-manager.py:299
+#, python-brace-format
+msgid "Command timed out after {seconds}s"
+msgstr "La commande a expiré après {seconds} s"
+
+#: cs9711-manager.py:302
+#, python-brace-format
+msgid "Command not found: {command}"
+msgstr "Commande introuvable : {command}"
+
+#: cs9711-manager.py:624 cs9711-manager.py:1858
+msgid "CS9711 Fingerprint Manager"
+msgstr "Gestionnaire d’empreintes CS9711"
+
+#: cs9711-manager.py:642
+msgid "Refresh status"
+msgstr "Actualiser l’état"
+
+#: cs9711-manager.py:650
+msgid "About this app"
+msgstr "À propos de cette application"
+
+#: cs9711-manager.py:658 cs9711-manager.py:1486
+msgid "Rebuild Driver"
+msgstr "Recompiler le pilote"
+
+#: cs9711-manager.py:734
+msgid "Welcome! Let's set up your fingerprint"
+msgstr "Bienvenue ! Configurons votre empreinte"
+
+#: cs9711-manager.py:736
+msgid ""
+"Your CS9711 scanner is connected and the driver is installed.\n"
+"\n"
+"To start using fingerprint login, you need to enroll a finger. This takes 15 "
+"touches on the scanner.\n"
+"\n"
+"By default, your RIGHT INDEX FINGER will be enrolled. If you're left-handed, "
+"you can change the finger in the dropdown below the Enroll button.\n"
+"\n"
+"Click 'Start Enrollment' to begin — then place your finger on the scanner "
+"when prompted."
+msgstr ""
+"Votre lecteur CS9711 est connecté et le pilote est installé.\n"
+"\n"
+"Pour utiliser la connexion par empreinte, vous devez enregistrer un doigt. "
+"Cela demande 15 contacts sur le lecteur.\n"
+"\n"
+"Par défaut, votre INDEX DROIT sera enregistré. Si vous êtes gaucher, vous "
+"pouvez changer de doigt dans la liste déroulante sous le bouton "
+"« Enregistrer ».\n"
+"\n"
+"Cliquez sur « Commencer l’enregistrement », puis posez votre doigt sur le "
+"lecteur lorsque cela vous est demandé."
+
+#: cs9711-manager.py:744 cs9711-manager.py:1624
+msgid "Later"
+msgstr "Plus tard"
+
+#: cs9711-manager.py:745
+msgid "Start Enrollment"
+msgstr "Commencer l’enregistrement"
+
+#: cs9711-manager.py:780
+#, python-brace-format
+msgid "Developed by {author}"
+msgstr "Développé par {author}"
+
+#: cs9711-manager.py:783
+msgid "Source and issues on GitHub"
+msgstr "Code source et tickets sur GitHub"
+
+#: cs9711-manager.py:788
+#, python-brace-format
+msgid ""
+"CS9711 Fingerprint Manager v{version} — MIT licensed. Driver: archeYR/"
+"libfprint-CS9711, LGPL-2.1-or-later."
+msgstr ""
+"Gestionnaire d’empreintes CS9711 v{version} — sous licence MIT. Pilote : "
+"archeYR/libfprint-CS9711, LGPL-2.1-or-later."
+
+#: cs9711-manager.py:823 cs9711-manager.py:850 cs9711-manager.py:1411
+#: cs9711-manager.py:1570
+msgid "Checking…"
+msgstr "Vérification…"
+
+#: cs9711-manager.py:832
+msgid "Scanner"
+msgstr "Lecteur"
+
+#: cs9711-manager.py:833
+msgid "Driver"
+msgstr "Pilote"
+
+#: cs9711-manager.py:834
+msgid "Fingers"
+msgstr "Doigts"
+
+#: cs9711-manager.py:843
+msgid "Fingerprint Enrollment"
+msgstr "Enregistrement d’empreinte"
+
+#: cs9711-manager.py:844
+msgid "15 touches required per finger"
+msgstr "15 contacts nécessaires par doigt"
+
+#: cs9711-manager.py:849
+msgid "Enrollment Status"
+msgstr "État de l’enregistrement"
+
+#: cs9711-manager.py:858
+msgid "Finger to enroll"
+msgstr "Doigt à enregistrer"
+
+#: cs9711-manager.py:878 cs9711-manager.py:2084
+msgid "Enroll"
+msgstr "Enregistrer"
+
+#: cs9711-manager.py:882
+msgid "Test Verify"
+msgstr "Tester la vérification"
+
+#: cs9711-manager.py:886 cs9711-manager.py:1127
+msgid "Delete All"
+msgstr "Tout supprimer"
+
+#: cs9711-manager.py:890 cs9711-manager.py:906 cs9711-manager.py:1126
+#: cs9711-manager.py:1702
+msgid "Cancel"
+msgstr "Annuler"
+
+#: cs9711-manager.py:902
+msgid "Fingerprints already enrolled"
+msgstr "Empreintes déjà enregistrées"
+
+#: cs9711-manager.py:903
+msgid ""
+"You already have fingerprints enrolled. Enrolling a new finger will add to "
+"the existing ones. To start fresh, delete all first."
+msgstr ""
+"Des empreintes sont déjà enregistrées. Un nouveau doigt s’ajoutera aux "
+"existants. Pour repartir de zéro, supprimez-les d’abord toutes."
+
+#: cs9711-manager.py:907 cs9711-manager.py:2076
+msgid "Add Another Finger"
+msgstr "Ajouter un autre doigt"
+
+#: cs9711-manager.py:927
+#, python-brace-format
+msgid "Preparing {finger}…"
+msgstr "Préparation : {finger}…"
+
+#: cs9711-manager.py:943
+#, python-brace-format
+msgid "Enrolling {finger}… Touch the scanner NOW"
+msgstr "Enregistrement : {finger}… Touchez le lecteur MAINTENANT"
+
+#: cs9711-manager.py:956
+msgid "Cancelled"
+msgstr "Annulé"
+
+#: cs9711-manager.py:967
+#, python-brace-format
+msgid "Touch {count}/15 — good, keep going!"
+msgstr "Contact {count}/15 — bien, continuez !"
+
+#: cs9711-manager.py:970 cs9711-manager.py:1006 cs9711-manager.py:1031
+msgid "Enrollment complete!"
+msgstr "Enregistrement terminé !"
+
+#: cs9711-manager.py:976
+#, python-brace-format
+msgid "Touch {count}/15 — bad read, try again"
+msgstr "Contact {count}/15 — mauvaise lecture, réessayez"
+
+#: cs9711-manager.py:982
+#, python-brace-format
+msgid "Touch {count}/15 — too short, hold longer"
+msgstr "Contact {count}/15 — trop court, maintenez plus longtemps"
+
+#: cs9711-manager.py:988
+#, python-brace-format
+msgid "Touch {count}/15 — center your finger"
+msgstr "Contact {count}/15 — centrez votre doigt"
+
+#: cs9711-manager.py:994
+#, python-brace-format
+msgid "Touch {count}/15 — lift and touch again"
+msgstr "Contact {count}/15 — levez puis touchez à nouveau"
+
+#: cs9711-manager.py:997
+msgid "Enrollment failed — try again"
+msgstr "Échec de l’enregistrement — réessayez"
+
+#: cs9711-manager.py:1000
+msgid "Storage full — delete old prints first"
+msgstr "Stockage plein — supprimez d’abord d’anciennes empreintes"
+
+#: cs9711-manager.py:1008
+msgid "Enrollment failed"
+msgstr "Échec de l’enregistrement"
+
+#: cs9711-manager.py:1011
+#, python-brace-format
+msgid "Error: {error}"
+msgstr "Erreur : {error}"
+
+#: cs9711-manager.py:1027
+msgid "All 15 touches done! Enrollment saved."
+msgstr "Les 15 contacts sont terminés ! Enregistrement sauvegardé."
+
+#: cs9711-manager.py:1032
+msgid ""
+"All 15 touches recorded successfully.\n"
+"\n"
+"Would you like to do a quick verification touch to confirm your fingerprint "
+"is working?"
+msgstr ""
+"Les 15 contacts ont été enregistrés avec succès.\n"
+"\n"
+"Voulez-vous effectuer une vérification rapide pour confirmer que votre "
+"empreinte fonctionne ?"
+
+#: cs9711-manager.py:1036
+msgid "Skip"
+msgstr "Passer"
+
+#: cs9711-manager.py:1037
+msgid "Verify Now"
+msgstr "Vérifier maintenant"
+
+#: cs9711-manager.py:1049
+msgid "Touch the scanner once to verify…"
+msgstr "Touchez le lecteur une fois pour vérifier…"
+
+#: cs9711-manager.py:1050
+msgid "Verification — touch the scanner once…"
+msgstr "Vérification — touchez le lecteur une fois…"
+
+#: cs9711-manager.py:1053
+msgid "Enrollment saved — you're all set!"
+msgstr "Enregistrement sauvegardé — tout est prêt !"
+
+#: cs9711-manager.py:1054
+msgid "Enrollment saved."
+msgstr "Enregistrement sauvegardé."
+
+#: cs9711-manager.py:1074
+msgid "Fingerprint verified! Everything is working."
+msgstr "Empreinte vérifiée ! Tout fonctionne."
+
+#: cs9711-manager.py:1076
+msgid "Fingerprint verified! You're all set."
+msgstr "Empreinte vérifiée ! Tout est prêt."
+
+#: cs9711-manager.py:1078
+msgid "Verification failed — try Test Verify again"
+msgstr "Échec de la vérification — réessayez avec « Tester la vérification »"
+
+#: cs9711-manager.py:1080
+msgid "Verification didn't match — try again with Test Verify"
+msgstr "Aucune correspondance — réessayez avec « Tester la vérification »"
+
+#: cs9711-manager.py:1096
+msgid "Touch the scanner to verify…"
+msgstr "Touchez le lecteur pour vérifier…"
+
+#: cs9711-manager.py:1103
+msgid "Fingerprint verified!"
+msgstr "Empreinte vérifiée !"
+
+#: cs9711-manager.py:1105
+msgid "No match — try again or re-enroll"
+msgstr "Aucune correspondance — réessayez ou réenregistrez"
+
+#: cs9711-manager.py:1107
+msgid "Verification timed out"
+msgstr "La vérification a expiré"
+
+#: cs9711-manager.py:1123
+msgid "Delete all fingerprints?"
+msgstr "Supprimer toutes les empreintes ?"
+
+#: cs9711-manager.py:1124
+msgid "You will need to re-enroll after deletion."
+msgstr "Vous devrez réenregistrer vos empreintes après la suppression."
+
+#: cs9711-manager.py:1167
+msgid "All fingerprints deleted"
+msgstr "Toutes les empreintes ont été supprimées"
+
+#: cs9711-manager.py:1169
+#, python-brace-format
+msgid "Delete failed: {error}"
+msgstr "Échec de la suppression : {error}"
+
+#: cs9711-manager.py:1191
+msgid "Scanner and Authentication"
+msgstr "Lecteur et authentification"
+
+#: cs9711-manager.py:1192
+msgid "How the scanner paces retries, and how many tries before password"
+msgstr ""
+"Rythme des nouvelles tentatives du lecteur et nombre d’essais avant le mot "
+"de passe"
+
+#: cs9711-manager.py:1197
+msgid "Retry Delay"
+msgstr "Délai entre tentatives"
+
+#: cs9711-manager.py:1198
+msgid "Pause between scan attempts (ms)"
+msgstr "Pause entre les tentatives de lecture (ms)"
+
+#. Translators: unit label for milliseconds next to the retry-delay slider.
+#: cs9711-manager.py:1217
+msgid "ms"
+msgstr "ms"
+
+#: cs9711-manager.py:1222
+msgid "Rebuild Required"
+msgstr "Recompilation requise"
+
+#: cs9711-manager.py:1223
+msgid "Retry delay changes require a driver rebuild to take effect"
+msgstr ""
+"La modification du délai nécessite une recompilation du pilote pour prendre "
+"effet"
+
+#: cs9711-manager.py:1230 cs9711-manager.py:1280
+msgid "Rebuild Now"
+msgstr "Recompiler maintenant"
+
+#: cs9711-manager.py:1252 cs9711-manager.py:1553
+msgid "Rebuilding…"
+msgstr "Recompilation…"
+
+#: cs9711-manager.py:1271 cs9711-manager.py:1560
+msgid "Driver rebuilt!"
+msgstr "Pilote recompilé !"
+
+#: cs9711-manager.py:1274
+#, python-brace-format
+msgid "Rebuild failed: {error}"
+msgstr "Échec de la recompilation : {error}"
+
+#: cs9711-manager.py:1297
+msgid "Max Attempts"
+msgstr "Tentatives maximales"
+
+#: cs9711-manager.py:1298
+msgid "Number of fingerprint tries before password fallback"
+msgstr "Nombre d’essais d’empreinte avant le mot de passe"
+
+#: cs9711-manager.py:1306
+msgid "Timeout (seconds)"
+msgstr "Délai (secondes)"
+
+#: cs9711-manager.py:1307
+msgid "Total time window for all fingerprint attempts"
+msgstr "Durée totale accordée à toutes les tentatives"
+
+#: cs9711-manager.py:1315
+msgid "Requires your login password (system files need admin access)"
+msgstr ""
+"Nécessite votre mot de passe de connexion (les fichiers système exigent des "
+"droits d’administrateur)"
+
+#: cs9711-manager.py:1318 cs9711-manager.py:1347 cs9711-manager.py:1372
+msgid "Apply PAM Settings"
+msgstr "Appliquer les réglages PAM"
+
+#: cs9711-manager.py:1331 cs9711-manager.py:1440
+msgid "Applying…"
+msgstr "Application…"
+
+#: cs9711-manager.py:1349
+msgid ""
+"Nothing enabled yet — turn on a switch under “Where to Use Fingerprint”; "
+"these settings apply with it"
+msgstr ""
+"Rien n’est encore activé — activez un interrupteur sous « Où utiliser "
+"l’empreinte » ; ces réglages s’y appliqueront"
+
+#: cs9711-manager.py:1375
+#, python-brace-format
+msgid "PAM updated: {tries} tries, {timeout}s timeout (applied to: {places})"
+msgstr ""
+"PAM mis à jour : {tries} essais, délai de {timeout} s (appliqué à : {places})"
+
+#: cs9711-manager.py:1381 cs9711-manager.py:1563
+#, python-brace-format
+msgid "Failed: {error}"
+msgstr "Échec : {error}"
+
+#: cs9711-manager.py:1395
+msgid "Where to Use Fingerprint"
+msgstr "Où utiliser l’empreinte"
+
+#: cs9711-manager.py:1396
+msgid ""
+"Turn fingerprint on or off for each place independently — password always "
+"still works"
+msgstr ""
+"Activez ou désactivez l’empreinte pour chaque emplacement — le mot de passe "
+"fonctionne toujours"
+
+#: cs9711-manager.py:1426
+msgid "On"
+msgstr "Activé"
+
+#: cs9711-manager.py:1426
+msgid "Off"
+msgstr "Désactivé"
+
+#: cs9711-manager.py:1452
+#, python-brace-format
+msgid "Couldn't change “{place}” — authentication cancelled or failed"
+msgstr ""
+"Impossible de modifier « {place} » — authentification annulée ou échouée"
+
+#: cs9711-manager.py:1455
+#, python-brace-format
+msgid "Fingerprint enabled for {place}"
+msgstr "Empreinte activée pour : {place}"
+
+#: cs9711-manager.py:1457
+#, python-brace-format
+msgid "Fingerprint disabled for {place}"
+msgstr "Empreinte désactivée pour : {place}"
+
+#: cs9711-manager.py:1467
+msgid "Maintenance"
+msgstr "Maintenance"
+
+#: cs9711-manager.py:1472
+#, python-brace-format
+msgid "Version: v{version}"
+msgstr "Version : v{version}"
+
+#: cs9711-manager.py:1473
+msgid "Click to check for updates"
+msgstr "Cliquez pour rechercher des mises à jour"
+
+#: cs9711-manager.py:1478 cs9711-manager.py:1599 cs9711-manager.py:1679
+msgid "Check for Updates"
+msgstr "Rechercher des mises à jour"
+
+#: cs9711-manager.py:1487
+msgid "Run after system updates overwrite the patched library"
+msgstr ""
+"À lancer après une mise à jour système qui écrase la bibliothèque modifiée"
+
+#: cs9711-manager.py:1490 cs9711-manager.py:1560 cs9711-manager.py:1562
+msgid "Rebuild"
+msgstr "Recompiler"
+
+#: cs9711-manager.py:1498 cs9711-manager.py:1703
+msgid "Uninstall Everything"
+msgstr "Tout désinstaller"
+
+#: cs9711-manager.py:1499
+msgid "Remove driver, fingerprints, GUI, desktop shortcut, and project files"
+msgstr ""
+"Supprimer le pilote, les empreintes, l’interface, le raccourci de bureau et "
+"les fichiers du projet"
+
+#: cs9711-manager.py:1503
+msgid "Uninstall"
+msgstr "Désinstaller"
+
+#: cs9711-manager.py:1520
+msgid "GNOME Keyring Auto-Unlock"
+msgstr "Déverrouillage auto du trousseau GNOME"
+
+#: cs9711-manager.py:1521
+msgid "Set empty keyring password for fingerprint login"
+msgstr ""
+"Définir un mot de passe vide pour le trousseau lors de la connexion par "
+"empreinte"
+
+#: cs9711-manager.py:1524
+msgid "Configure"
+msgstr "Configurer"
+
+#: cs9711-manager.py:1530
+msgid "Diagnostics"
+msgstr "Diagnostic"
+
+#: cs9711-manager.py:1531
+#, python-brace-format
+msgid "Log: {path}"
+msgstr "Journal : {path}"
+
+#: cs9711-manager.py:1535 cs9711-manager.py:1905
+msgid "Activity Log"
+msgstr "Journal d’activité"
+
+#: cs9711-manager.py:1536
+msgid "View all events for troubleshooting"
+msgstr "Afficher tous les événements pour le dépannage"
+
+#: cs9711-manager.py:1541
+msgid "View Log"
+msgstr "Voir le journal"
+
+#: cs9711-manager.py:1544
+msgid "Clear Log"
+msgstr "Effacer le journal"
+
+#: cs9711-manager.py:1554
+msgid "Rebuilding driver — this may take a minute…"
+msgstr "Recompilation du pilote — cela peut prendre une minute…"
+
+#: cs9711-manager.py:1571
+msgid "Checking for updates…"
+msgstr "Recherche de mises à jour…"
+
+#: cs9711-manager.py:1578
+#, python-brace-format
+msgid "Fetch failed: {error}"
+msgstr "Échec de la récupération : {error}"
+
+#: cs9711-manager.py:1602
+#, python-brace-format
+msgid "v{version} — could not check remote"
+msgstr "v{version} — impossible de vérifier le dépôt distant"
+
+#: cs9711-manager.py:1603
+#, python-brace-format
+msgid "Update check failed: {error}"
+msgstr "Échec de la recherche de mises à jour : {error}"
+
+#: cs9711-manager.py:1607
+#, python-brace-format
+msgid "v{version} — up to date!"
+msgstr "v{version} — à jour !"
+
+#: cs9711-manager.py:1609
+msgid "You're on the latest version!"
+msgstr "Vous utilisez la dernière version !"
+
+#: cs9711-manager.py:1614
+#, python-brace-format
+msgid "v{current} → v{latest} available"
+msgstr "v{current} → v{latest} disponible"
+
+#: cs9711-manager.py:1619
+#, python-brace-format
+msgid "Update available: v{version}"
+msgstr "Mise à jour disponible : v{version}"
+
+#: cs9711-manager.py:1620
+#, python-brace-format
+msgid ""
+"You have v{current}. Changes:\n"
+"\n"
+"{changes}\n"
+"\n"
+"The GUI will restart after updating."
+msgstr ""
+"Vous avez la v{current}. Modifications :\n"
+"\n"
+"{changes}\n"
+"\n"
+"L’interface redémarrera après la mise à jour."
+
+#: cs9711-manager.py:1625
+msgid "Update Now"
+msgstr "Mettre à jour maintenant"
+
+#: cs9711-manager.py:1637
+msgid "Updating…"
+msgstr "Mise à jour…"
+
+#: cs9711-manager.py:1664
+#, python-brace-format
+msgid "Updated to v{version} — restarting…"
+msgstr "Mis à jour en v{version} — redémarrage…"
+
+#: cs9711-manager.py:1665
+msgid "Updated! Restarting GUI…"
+msgstr "Mis à jour ! Redémarrage de l’interface…"
+
+#: cs9711-manager.py:1680
+#, python-brace-format
+msgid "v{version} — update failed"
+msgstr "v{version} — échec de la mise à jour"
+
+#: cs9711-manager.py:1681
+#, python-brace-format
+msgid "Update failed: {error}"
+msgstr "Échec de la mise à jour : {error}"
+
+#: cs9711-manager.py:1694
+msgid "Uninstall everything?"
+msgstr "Tout désinstaller ?"
+
+#: cs9711-manager.py:1695
+msgid ""
+"This will completely remove:\n"
+"\n"
+"- Enrolled fingerprints\n"
+"- Patched CS9711 driver\n"
+"- GUI Manager and desktop shortcut\n"
+"- The entire project folder\n"
+"\n"
+"Stock libfprint will be restored. It will be as if this was never installed."
+msgstr ""
+"Les éléments suivants seront entièrement supprimés :\n"
+"\n"
+"- Empreintes enregistrées\n"
+"- Pilote CS9711 modifié\n"
+"- Gestionnaire graphique et raccourci de bureau\n"
+"- L’intégralité du dossier du projet\n"
+"\n"
+"La libfprint d’origine sera restaurée, comme si rien n’avait jamais été "
+"installé."
+
+#: cs9711-manager.py:1721
+msgid "Uninstalling… removing fingerprints"
+msgstr "Désinstallation… suppression des empreintes"
+
+#: cs9711-manager.py:1729
+msgid "Step 1/5 — Removing fingerprints…"
+msgstr "Étape 1/5 — Suppression des empreintes…"
+
+#: cs9711-manager.py:1765
+msgid "Step 2/5 — Removing driver (enter password)…"
+msgstr "Étape 2/5 — Suppression du pilote (saisissez le mot de passe)…"
+
+#: cs9711-manager.py:1782
+msgid "Uninstall cancelled — no changes made"
+msgstr "Désinstallation annulée — aucune modification"
+
+#: cs9711-manager.py:1783
+msgid "Uninstall cancelled"
+msgstr "Désinstallation annulée"
+
+#: cs9711-manager.py:1788
+msgid "Step 3/5 — Restoring stock driver…"
+msgstr "Étape 3/5 — Restauration du pilote d’origine…"
+
+#: cs9711-manager.py:1791
+msgid "Step 4/5 — Removing desktop shortcut…"
+msgstr "Étape 4/5 — Suppression du raccourci de bureau…"
+
+#: cs9711-manager.py:1799
+msgid "Step 5/5 — Removing project files…"
+msgstr "Étape 5/5 — Suppression des fichiers du projet…"
+
+#: cs9711-manager.py:1816
+msgid "Uninstall complete — closing in 3 seconds…"
+msgstr "Désinstallation terminée — fermeture dans 3 secondes…"
+
+#: cs9711-manager.py:1817
+msgid "Uninstall complete — everything removed"
+msgstr "Désinstallation terminée — tout a été supprimé"
+
+#: cs9711-manager.py:1827
+msgid "Keyring helper not found"
+msgstr "Assistant de trousseau introuvable"
+
+#: cs9711-manager.py:1844
+#, python-brace-format
+msgid "Keyring helper opened in {terminal}"
+msgstr "Assistant de trousseau ouvert dans {terminal}"
+
+#: cs9711-manager.py:1847
+#, python-brace-format
+msgid "No terminal found — run manually: {command}"
+msgstr "Aucun terminal trouvé — lancez manuellement : {command}"
+
+#: cs9711-manager.py:1869
+msgid ""
+"Driver installer and manager for the Chipsailing CS9711 fingerprint scanner "
+"(USB 2541:0236) on Linux.\n"
+"\n"
+"This manager and the installer scripts are MIT licensed. The patched "
+"libfprint driver it builds is LGPL-2.1-or-later, from the archeYR/libfprint-"
+"CS9711 community fork."
+msgstr ""
+"Installateur de pilote et gestionnaire pour le lecteur d’empreintes "
+"Chipsailing CS9711 (USB 2541:0236) sous Linux.\n"
+"\n"
+"Ce gestionnaire et les scripts d’installation sont sous licence MIT. Le "
+"pilote libfprint modifié qu’il compile est sous LGPL-2.1-or-later et "
+"provient du fork communautaire archeYR/libfprint-CS9711."
+
+#. Translators: replace with your names, one per line, to be credited
+#. in the About dialog.
+#: cs9711-manager.py:1878
+msgid "translator-credits"
+msgstr ""
+
+#: cs9711-manager.py:1882
+msgid "Developer on GitHub"
+msgstr "Développeur sur GitHub"
+
+#: cs9711-manager.py:1883
+msgid "Report an issue"
+msgstr "Signaler un problème"
+
+#: cs9711-manager.py:1884
+msgid "Upstream driver"
+msgstr "Pilote en amont"
+
+#: cs9711-manager.py:1901
+msgid "(No log file yet)"
+msgstr "(Pas encore de fichier journal)"
+
+#: cs9711-manager.py:1914
+msgid "Copy log to clipboard"
+msgstr "Copier le journal dans le presse-papiers"
+
+#: cs9711-manager.py:1937
+msgid "Log copied to clipboard"
+msgstr "Journal copié dans le presse-papiers"
+
+#: cs9711-manager.py:1959
+msgid "Log cleared"
+msgstr "Journal effacé"
+
+#: cs9711-manager.py:2008
+msgid "Driver needs rebuilding"
+msgstr "Le pilote doit être recompilé"
+
+#: cs9711-manager.py:2009
+#, python-brace-format
+msgid ""
+"Missing {libraries} — a system library the driver was built against was "
+"upgraded. Rebuild to relink against the new one."
+msgstr ""
+"{libraries} manquant — une bibliothèque système utilisée pour compiler le "
+"pilote a été mise à jour. Recompilez-le pour le lier à la nouvelle."
+
+#: cs9711-manager.py:2016
+msgid "Scanner not detected"
+msgstr "Lecteur non détecté"
+
+#: cs9711-manager.py:2017
+msgid ""
+"Check the USB connection. If it plugs into a keyboard hub, the keyboard must "
+"be connected by cable, not wirelessly."
+msgstr ""
+"Vérifiez la connexion USB. S’il est branché sur le concentrateur d’un "
+"clavier, celui-ci doit être relié par câble et non sans fil."
+
+#: cs9711-manager.py:2023
+msgid "Driver not installed"
+msgstr "Pilote non installé"
+
+#: cs9711-manager.py:2024
+msgid "Run install.sh, or use Rebuild Driver below if it was working before."
+msgstr ""
+"Lancez install.sh, ou utilisez « Recompiler le pilote » ci-dessous si cela "
+"fonctionnait auparavant."
+
+#: cs9711-manager.py:2029
+msgid "Ready to set up"
+msgstr "Prêt à configurer"
+
+#: cs9711-manager.py:2030
+msgid "Scanner and driver are working — enrol a finger to start using it."
+msgstr ""
+"Le lecteur et le pilote fonctionnent — enregistrez un doigt pour commencer."
+
+#: cs9711-manager.py:2035
+msgid "Fingerprint is ready"
+msgstr "L’empreinte est prête"
+
+#: cs9711-manager.py:2037
+#, python-brace-format
+msgid "Active for {places}."
+msgstr "Actif pour : {places}."
+
+#: cs9711-manager.py:2040
+msgid ""
+"Enrolled, but not switched on anywhere yet — see Where to Use Fingerprint."
+msgstr ""
+"Enregistrée, mais activée nulle part pour l’instant — voir « Où utiliser "
+"l’empreinte »."
+
+#: cs9711-manager.py:2053
+msgid "Scanner ✓"
+msgstr "Lecteur ✓"
+
+#: cs9711-manager.py:2053
+msgid "Scanner ✕"
+msgstr "Lecteur ✕"
+
+#: cs9711-manager.py:2056
+msgid "Driver ✓"
+msgstr "Pilote ✓"
+
+#: cs9711-manager.py:2056
+msgid "Driver broken"
+msgstr "Pilote défectueux"
+
+#: cs9711-manager.py:2056
+msgid "Driver ✕"
+msgstr "Pilote ✕"
+
+#: cs9711-manager.py:2059
+#, python-brace-format
+msgid "{count} finger"
+msgid_plural "{count} fingers"
+msgstr[0] "{count} doigt"
+msgstr[1] "{count} doigts"
+
+#: cs9711-manager.py:2060
+msgid "No fingers"
+msgstr "Aucun doigt"
+
+#: cs9711-manager.py:2066
+#, python-brace-format
+msgid "Driver cannot load — missing {libraries} (system OpenCV upgrade?)"
+msgstr ""
+"Impossible de charger le pilote — {libraries} manquant (mise à jour "
+"d’OpenCV ?)"
+
+#: cs9711-manager.py:2077
+msgid "Enrolled"
+msgstr "Enregistré"
+
+#: cs9711-manager.py:2079
+#, python-brace-format
+msgid "{count} finger: {names}"
+msgid_plural "{count} fingers: {names}"
+msgstr[0] "{count} doigt : {names}"
+msgstr[1] "{count} doigts : {names}"
+
+#: cs9711-manager.py:2085
+msgid "Not Enrolled"
+msgstr "Non enregistré"
+
+#: cs9711-manager.py:2087
+msgid "No fingerprints enrolled — click Enroll to get started"
+msgstr ""
+"Aucune empreinte enregistrée — cliquez sur « Enregistrer » pour commencer"

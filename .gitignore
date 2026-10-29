@@ -18,6 +18,8 @@ pkg/
 
 __pycache__/
 *.pyc
+# GUI translations compiled from po/ by helpers/gui-setup.sh
+locale/
 # built packages (attached to releases, not committed)
 *.deb
 *.rpm
