@@ -1,5 +1,7 @@
 # Chipsailing CS9711 Fingerprint Scanner — Linux Driver Installer
 
+English | [日本語](README_ja.md)
+
 One-command installer for the **Chipsailing CS9711** USB fingerprint scanner on Linux.
 
 Stock `libfprint` does **not** support this chip. This project automates the entire setup: detecting your distro, installing dependencies, cloning the community driver, applying patches, building, installing, and configuring PAM — so your fingerprint works for login, lock screen, and sudo.
@@ -305,7 +307,8 @@ KWallet has the same problem in reverse: it is opened by a PAM module that captu
 ├── VERSION                      # Current version number
 ├── CHANGELOG.md                 # Version history and release notes
 ├── LICENSE
-└── README.md
+├── README.md
+└── README_ja.md                 # Japanese translation of this README
 ```
 
 ## Troubleshooting
